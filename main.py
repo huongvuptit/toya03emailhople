@@ -14,6 +14,17 @@ testcase_list = [
   {'input': {'email_list':['abb#ccc']                            }, 'output':['ERROR invaid email']                           , 'tc_name': 'tc3' }, 
   {'input': {'email_list':[None]                                 }, 'output':['ERROR invaid email']                           , 'tc_name': 'tc4' }, 
   {'input': {'email_list':[None, 'abb#ccc']                      }, 'output':['ERROR invaid email', 'ERROR invaid email']     , 'tc_name': 'tc5' }, 
+
+  { 'input': [['im9']]                                                         , 'output': ['ERROR invaid email']                                            , 'tc_name': 'tc6', },
+  { 'input': [['ortiznathan@example.net', 'brenthart@example.org']]            , 'output': ['ortiznathan', 'brenthart']                                      , 'tc_name': 'tc7', },
+  { 'input': [['sabrina77@example.org']]                                       , 'output': ['sabrina77']                                                     , 'tc_name': 'tc8', },
+  { 'input': [['lindsey85@example.com']]                                       , 'output': ['lindsey85']                                                     , 'tc_name': 'tc9', },
+  { 'input': [['allennewman@example.org', None, 'jillsanders@example.com']]    , 'output': ['allennewman', 'ERROR invaid email', 'jillsanders']              , 'tc_name': 'tc10', },
+  { 'input': [[]]                                                              , 'output': []                                                                , 'tc_name': 'tc11', },
+  { 'input': [['er65#exampl', 'jordanlindsey@example.com']]                    , 'output': ['ERROR invaid email', 'jordanlindsey']                           , 'tc_name': 'tc12', },
+  { 'input': [['lsantana@example.net', 'pmartin@example.net', None]]           , 'output': ['lsantana', 'pmartin', 'ERROR invaid email']                     , 'tc_name': 'tc13', },
+  { 'input': [['mollymann@example.org']]                                       , 'output': ['mollymann']                                                     , 'tc_name': 'tc14', },
+  { 'input': [[None, None, 'manningdavid@example.com']]                        , 'output': ['ERROR invaid email', 'ERROR invaid email', 'manningdavid']      , 'tc_name': 'tc15', },
 ]
 #endregion testkey_list
 
