@@ -33,7 +33,7 @@ get_name_in_email([None, 'abb#ccc'])                      | ['ERROR invaid email
 
 #region bailam
 def get_name_in_email(email_list):
-  return 'todo'
+  return 'todo n'
   
 
 if __name__=='__main__':
