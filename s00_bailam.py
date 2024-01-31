@@ -29,13 +29,31 @@ get_name_in_email(['abb#ccc'])                            | ['ERROR invaid email
 get_name_in_email([None])                                 | ['ERROR invaid email']
 get_name_in_email([None, 'abb#ccc'])                      | ['ERROR invaid email', 'ERROR invaid email']
 """
+
 #endregion debai
+
 
 #region bailam
 def get_name_in_email(email_list):
-  return 'todo n'
-  
+  if email_list is None:
+    return ['ERROR invaid email']
 
-if __name__=='__main__':
+  if len(email_list) == 0:
+    return []
+
+  name_list = []
+  for e in email_list:
+    if (e is None) or ('@' not in e):
+      name_list.append('ERROR invaid email')
+    else:
+      name_list.append(e.split('@')[0])
+
+  if len(name_list) == 0:
+    return ['ERROR invaid email']
+
+  return name_list
+
+
+if __name__ == '__main__':
   pass
 #endregion bailam
